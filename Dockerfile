@@ -1,10 +1,11 @@
-FROM ubuntu:16:04
+FROM ubuntu:16.04
 MAINTAINER Gary Leong <gwleong@gmail.com>
 
 ############################################################
 #####Basic Pkgs - Public
 ############################################################
 RUN echo "Installing Basic Pkgs" && \
+    apt-get update && \
     locale-gen en_US.UTF-8 && \
     dpkg-reconfigure locales && \
     export  LANG=en_US.UTF-8 && \
@@ -28,4 +29,3 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 EXPOSE 22
 CMD ["/usr/bin/supervisord"]
-
