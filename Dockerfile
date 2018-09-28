@@ -4,11 +4,11 @@ MAINTAINER Gary Leong <gwleong@gmail.com>
 ############################################################
 #####Basic Pkgs - Public
 ############################################################
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US
+ENV LC_ALL en_US.UTF-8
+
 RUN echo "Installing Basic Pkgs" && \
-    dpkg-reconfigure locales && \
-    export  LANG=en_US.UTF-8 && \
-    export  LANGUAGE=en_US && \
-    export  LC_ALL=en_US.UTF-8 && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
     apt-get update && \
     apt-get install -y pwgen wget curl libssl-dev rng-tools haveged \
