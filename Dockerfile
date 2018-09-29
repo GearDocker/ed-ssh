@@ -26,6 +26,8 @@ RUN mkdir -p /var/run/sshd /var/log/supervisor
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 COPY sshd_config /etc/ssh/
+COPY .bash_profile /root/.bash_profile
+COPY .bashrc /root/.bashrc
 
 EXPOSE 22
 CMD ["/usr/bin/supervisord"]
