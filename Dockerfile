@@ -25,5 +25,7 @@ RUN sh -c "curl -L https://raw.githubusercontent.com/docker/compose/1.8.1/contri
 RUN mkdir -p /var/run/sshd /var/log/supervisor
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
+COPY sshd_config /etc/ssh/
+
 EXPOSE 22
 CMD ["/usr/bin/supervisord"]
