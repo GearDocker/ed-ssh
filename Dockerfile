@@ -12,7 +12,9 @@ RUN echo "Installing Basic Pkgs" && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
     apt-get update && \
     apt-get install -y pwgen wget curl libssl-dev rng-tools haveged \
-                       openssh-server supervisor
+                       openssh-server supervisor git python-dev rng-tools haveged \
+                       autoconf python-argparse python-paramiko python-setuptools \
+                       python-yaml python-gridfs python-pip python-psutil python-prettytable -y
 
 RUN echo "Installing Docker Pkgs" && \
     apt-get -y install docker.io 
