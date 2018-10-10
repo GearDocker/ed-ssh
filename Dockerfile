@@ -4,6 +4,7 @@ MAINTAINER Gary Leong <gwleong@gmail.com>
 ############################################################
 #####Basic Pkgs - Public
 ############################################################
+RUN locale-gen en_US.UTF-8  
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US
 ENV LC_ALL en_US.UTF-8
