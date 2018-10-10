@@ -15,7 +15,8 @@ RUN echo "Installing Basic Pkgs" && \
     apt-get install -y pwgen wget curl libssl-dev rng-tools haveged \
                        openssh-server supervisor git python-dev rng-tools haveged \
                        autoconf python-argparse python-paramiko python-setuptools \
-                       python-yaml python-gridfs python-pip python-psutil python-prettytable -y
+                       python-yaml python-gridfs python-pip python-psutil \
+                       python-prettytable locales -y
 
 RUN echo "Installing Docker Pkgs" && \
     apt-get -y install docker.io 
