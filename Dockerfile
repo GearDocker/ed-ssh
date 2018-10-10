@@ -32,7 +32,7 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY sshd_config /etc/ssh/
 COPY .bash_profile /root/.bash_profile
 COPY .bashrc /root/.bashrc
-COPY requirements.txt /root/requirements
+COPY requirements.txt /root/requirements.txt
 RUN pip install -r /root/requirements.txt
 
 EXPOSE 22
