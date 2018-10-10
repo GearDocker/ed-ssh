@@ -2,13 +2,8 @@ FROM ubuntu:16.04
 MAINTAINER Gary Leong <gwleong@gmail.com>
 
 ############################################################
-#####Basic Pkgs - Public
+# Basic Pkgs - Public
 ############################################################
-RUN locale-gen en_US.UTF-8  
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US
-ENV LC_ALL en_US.UTF-8
-
 RUN echo "Installing Basic Pkgs" && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
     apt-get update && \
@@ -17,6 +12,11 @@ RUN echo "Installing Basic Pkgs" && \
                        autoconf python-argparse python-paramiko python-setuptools \
                        python-yaml python-gridfs python-pip python-psutil \
                        python-prettytable locales -y
+
+RUN locale-gen en_US.UTF-8  
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US
+ENV LC_ALL en_US.UTF-8
 
 RUN echo "Installing Docker Pkgs" && \
     apt-get -y install docker.io 
