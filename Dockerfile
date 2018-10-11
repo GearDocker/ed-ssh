@@ -11,7 +11,7 @@ RUN echo "Installing Basic Pkgs" && \
                        openssh-server supervisor git python-dev rng-tools haveged \
                        autoconf python-argparse python-paramiko python-setuptools \
                        python-yaml python-gridfs python-pip python-psutil \
-                       python-prettytable locales vim -y
+                       python-prettytable screen locales vim -y
 
 RUN locale-gen en_US.UTF-8  
 ENV LANG en_US.UTF-8
